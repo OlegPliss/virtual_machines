@@ -50,7 +50,7 @@ public:
   void connect(int from, int to) {
     connect(nodes[from], to);
   }
-  void build_complete_dighraph() {
+  void build_complete_digraph() {
     const auto n = nodes.size();
     for (int i = 0; i < n; i++)
       for (int j = 0; j < n; j++)
@@ -61,7 +61,7 @@ public:
 static inline int64_t test(void) {
   const auto start = memory_usage();
   Graph g(10000);
-  g.build_complete_dighraph();
+  g.build_complete_digraph();
   return memory_usage() - start;
 }
 
