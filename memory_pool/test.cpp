@@ -49,8 +49,8 @@ static inline void test(unsigned n) {
   cout << "Memory used: " << mem_used << " bytes\n";
 
   auto mem_required = n * sizeof(Node);
-  auto fragmentation = (mem_used - mem_required) * double(100) / mem_used;
-  cout << "Fragmentation: " << std::fixed << std::setw(4) << std::setprecision(1)
+  auto overhead = (mem_used - mem_required) * double(100) / mem_used;
+  cout << "Overhead: " << std::fixed << std::setw(4) << std::setprecision(1)
        << fragmentation << "%\n";
 }
 
